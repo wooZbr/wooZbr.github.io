@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Another GTA Database</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title id="indexTitle">Another GTA Database</title>
+        <script src="js/main.js"></script>
     </head>
     <body>
         <header>
             <h1>Another GTA Database</h1>
-            <a href="https://woozbr.github.io/gtadb/SA/vehicles.html"><h3>SA Vehicles</h3></a> 
-            <a href="https://dev.prineside.com/en/gtasa_samp_model_id/"><h3>SA Models</h3></a>
-            <h3>Other</h3>
+            <button type="button" id="SAVehBtn" onclick="pageChange('gtadb/SA/Vehicles.html', 'SA Vehicles')">SA Vehicles</button>
+            <button type="button" id="homeBtn" onclick="pageChange('home.html', 'Home')">Home</button>
         </header>
 
         <div id="Content" class="Content">
-            <iframe src="home.html" width="100%" height="100%" title="Content" style="border:none;"></iframe>
+            <iframe id="iContent" src="home.html" width="100%" height="100%" title="Content" style="border:none;"></iframe>
         </div>
     </body>
 
@@ -31,14 +32,22 @@
             color: rgb(240, 240, 240);
             z-index: 1;
         }
-        h3  {
+        button {
             position: relative;
-            width: 200px;
-            bottom: 2px;
+            height: auto;
+            width: auto;
+            text-align: center;
+            padding: 8px 8px;
+            bottom: 8px;
             margin-right: 20px;
             display: inline;
+            border: none;
+            outline: none;
+            color: rgb(240, 240, 240);
+            background-color: rgba(255, 255, 255, 0.075);
             text-decoration: underline solid 3px rgba(255, 255, 255, 0.2);
         }
+        
         h1  {
             text-align: center;
             position: relative;
