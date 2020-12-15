@@ -4,7 +4,7 @@
         <title>GTA Vehicles</title>
     </head>
     <body>
-        <h1>This page is under construction</h1>
+        <h1 id="demo">This page is under construction</h1>
     </body>
 
     <style>
@@ -15,4 +15,12 @@
             font-family: Arial, Helvetica, sans-serif;
         }
     </style>
+
+    <script>
+    parser = new DOMParser();
+    xmlDoc = parser.parseFromFile("vehicles.xml","text/xml");
+
+    document.getElementById("demo").innerHTML =
+    xmlDoc.getElementsByTagName("id")[0].childNodes[0].nodeValue;
+    </script>
 </html>
