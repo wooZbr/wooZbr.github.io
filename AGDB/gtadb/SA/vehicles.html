@@ -2,10 +2,50 @@
 <html>
     <head>
         <title>GTA Vehicles</title>
+        <link rel="stylesheet" type="text/css"  href="sortmenu.css" />
     </head>
-    <body>
-        <h1 id="demo">This page is under construction</h1>
+    <body onload="listGen()">
+        <div id="SortMenu" class="SortMenu">
+            <ul class="menu">
+                <li><a href="#">Sort By:</a>
+                    <ul>
+                      <li onclick="listGen()"><a href="#" >Name</a></li>
+                      <li><a href="#">Id</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="list" class="list">
+            <img id="VehImg" src="https://i.ytimg.com/vi/jCMGE0HWIlw/hqdefault.jpg">
+            <p id="URLP">URL</p>
+        </div>
     </body>
+
+    <script>
+        function listGen() {
+            
+            xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "vehicles.xml", true);
+            xhttp.send();
+            xmlDoc = xhttp.responseXML;
+            var imgUrl = xmlDoc.getElementsByTagName("image").innerHTML;
+            document.getElementById("URLP").innerHTML = "changed";
+            listClone()
+            
+        }
+        function listClone() {
+            var listdiv = document.getElementById("list");
+            var listclones = [listdiv.cloneNode(true)];
+            for(let i = 1; i < 21; i++){
+                listclones.push(listdiv.cloneNode(true));
+                //listclones[i].innerHTML = "new";
+                document.body.appendChild(listclones[i]);
+            }
+        }
+        function listDel() {
+            listclones[3].innerHTML = "changed";
+        }
+    </script>
 
     <style>
         body {
@@ -14,13 +54,31 @@
             height: 100%;
             font-family: Arial, Helvetica, sans-serif;
         }
+        #VehImg {
+            width: 20%;
+            height: 20%;
+
+        }
+        .SortMenu {
+            position: fixed;
+            width: auto;
+            height: auto;
+            left: -40px;
+            top: -5px;
+        }
+        .SortMenu p {
+            height: auto;
+            width: auto;
+            padding: 0px 0px;
+            display: inline-block;
+            position:relative;
+        }
+        .list {
+            position: relative;
+            height: 100%;
+            outline: 2px solid black;
+            top: 80px;
+        }
+        
     </style>
-
-    <script>
-    parser = new DOMParser();
-    xmlDoc = parser.parseFromFile("vehicles.xml","text/xml");
-
-    document.getElementById("demo").innerHTML =
-    xmlDoc.getElementsByTagName("id")[0].childNodes[0].nodeValue;
-    </script>
 </html>

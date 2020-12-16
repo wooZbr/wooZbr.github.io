@@ -1,0 +1,32 @@
+.menu{
+    list-style:none;
+    border:none;
+    float:none;
+    width: auto;
+    height: auto;
+    position: relative;
+}
+.menu li{
+    position:relative;
+    float:left;
+    border-right:none;
+}
+.menu li a{color:rgb(238, 238, 238); text-decoration:none; padding:5px 10px; display:block;}
+
+.menu li a:hover{
+    background:rgb(92, 85, 142);
+    color:#fff;
+}
+.menu li  ul{
+    position:absolute;
+    top:25px;
+    left:0;
+    background-color: rgb(79, 71, 133);
+    display:none;
+}
+.menu li:hover ul, .menu li.over ul{display:block;}
+.menu li ul li{
+    border:none;
+    display:block;
+    width:150px;
+}
