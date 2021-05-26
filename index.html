@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Plymouth - Home Page</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="reset.css">
+        <script src="script.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <a href="index.html"><img src="img/logo.png" class="logo-head"></a>
+
+                <ul class="links-head">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="menu-head-btn"><a onclick="showMenu()">Modelos</a></li>
+                    <li class="menu-head-container" id="menu-head-container">
+                        <ul class="menu-head">
+                            <li class="menu-head-link"><a href="barracuda.html">Barracuda</a></li>
+                            <li class="menu-head-link"><a href="gtx.html">GTX</a></li>
+                            <li class="menu-head-link"><a href="roadrunner.html">Road Runner</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+                
+                <div class="search"> <!-- &#x1f50e -->
+                    <label for="searchinput"><img src="img/magnifier.png"></label>
+                    <input type="search" id="searchinput" placeholder="Pesquisar">
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="title-main" id="title-main">
+                <h1>Conheça nossos modelos!</h1>
+            </section>
+
+            <section class="model-showcase">
+                <div class="showcase-section">
+                    <div class="model-img" style="background-image: url(img/ply-br.jpg);">
+                        <div class="model-link" onclick="changePage('barracuda.html')">
+                            <button class="model-button"><a href="barracuda.html">Ver mais</a></button>
+                            <h3>Mais informações na página do modelo</h3>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <h2>Barracuda</h2>
+                        <p> Equipado com um poderoso motor V8!</p>
+                        <iframe class="model-video" width="500" height="258" src="https://www.youtube.com/embed/7DMpe8W57FQ" title="YouTube video player" frameborder="0" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="showcase-section">
+                    <div class="model-info">
+                        <h2>GTX</h2>
+                        <p> Manual ou automático, Hardtop ou conversível!</p>
+                        <iframe class="model-video" width="500" height="258" src="https://www.youtube.com/embed/5bn_rtunaw8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="model-img" style="background-image: url(img/ply-gtx.jpg);">
+                        <div class="model-link" onclick="changePage('gtx.html')">
+                            <button class="model-button"><a>Ver mais</a></button>
+                            <h3>Mais informações na página do modelo</h3>
+                           </div>
+                    </div>
+                </div>
+                <div class="showcase-section">
+                    <div class="model-img" style="background-image: url(img/ply-rr.jpg);">
+                        <div class="model-link" onclick="changePage('roadrunner.html')">
+                            <button class="model-button"><a>Ver mais</a></button>
+                            <h3>Mais informações na página do modelo</h3>
+                           </div>
+                    </div>
+                    <div class="model-info">
+                        <h2>Road Runner</h2>
+                        <p>O simpático papa-léguas!</p>
+                        <iframe class="model-video" width="500" height="258" src="https://www.youtube.com/embed/HcTPNy-XZjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media;picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <section class="map-section">
+                <h2 class="map-title">Para mais informações, consulte uma concessionária</h2>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.322559996105!2d-83.23614358497736!3d42.65451952444815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824c0180655344f%3A0x48baad7b283fc8d4!2sChrysler%20Headquarters%20and%20Technology%20Center%2C%20Auburn%20Hills%2C%20MI%2048326%2C%20EUA!5e0!3m2!1spt-BR!2sbr!4v1621729724703!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="copy-logos"> 
+                    <a href="index.html"><img src="img/logo96.png" class="logo-foot"></a>
+                    <a href="https://www.stellantis.com/en"><img src="img/FCA.webp" class="logo-foot"></a>
+                    <a href="https://www.chrysler.com"><img src="img/CC.webp" class="logo-foot"></a>
+                </div>
+
+                <p class="copyright-foot"> ©1970 FCA US LLC. All Rights Reserved. </p>
+
+                <ul class="links-foot">
+                    <li><a href="https://www.chrysler.com/">Chrysler</a></li>
+                    <li><a href="https://www.dodge.com/">Dodge</a></li>
+                    <li><a href="https://www.jeep.com/">Jeep</a></li>
+                    <li><a href="https://www.ramtrucks.com/">Ram</a></li>
+                    <li><a href="https://www.fiatusa.com/">Fiat</a></li>
+                    <li><a href="https://www.alfaromeousa.com/">Alfa Romeo</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
